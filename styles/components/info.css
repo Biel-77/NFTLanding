@@ -40,6 +40,7 @@
 /*INFO WRAPPER  */
 .info-wrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding-inline: 1.25rem;
     gap: 1.5rem;
@@ -77,4 +78,20 @@
     padding: 0.5em 2em;
     border-radius: 8px;
    color: #000;
+}
+
+@media (width < 1024px) {
+    .info-wrapper {
+        flex-direction: column;
+    }
+
+    .section__description {
+        max-width: 60ch;
+    }
+}
+
+@media (width < 475px) {
+    .section__tittle {
+        font-size: 2rem;
+    }
 }
